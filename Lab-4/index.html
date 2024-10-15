@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Заповніть форму</h1>
+<form action="https://httpbin.org/post" method="post">
+  <div class ="name">
+    <label for="name">Ім'я:</label>
+    <input type="text" name="name" id="name" required />
+  </div>
+  <div class="date">
+    <label for="date">Дата народження: </label>
+    <input type="date" name="date" id="date" required />
+  </div>
+  <div class="email">
+    <label for="email">Email: </label>
+    <input type="email" name="email" id="email" required />
+  </div>
+  <div class="ms">
+    <label for="ms">Повідомлення: </label>
+    <textarea type="text" name="ms" id="ms" required></textarea>
+  </div>
+<picture>
+  <img srcset="
+  https://fastly.picsum.photos/id/846/300/500.jpg?hmac=VlZoven6Rdm2vUihmiPxbu_js35_-p5QLsIaauPqCF8 300w,
+  https://fastly.picsum.photos/id/931/1000/400.jpg?hmac=chHa57pa9hzq4yVN-deezekLezv39lFHHJ-N8hd0s0c 1000w
+           " alt="img" />
+</picture>
+<fieldset>
+  <legend>
+    Ваші улюблені напої
+  </legend>
+
+  <div>
+    <input type="checkbox" id="cola" name="cola" checked />
+    <label for="scales">Кока-кола</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="pepsi" name="pepsi" />
+    <label for="horns">Пепсі</label>
+  </div>
+    <div>
+    <input type="checkbox" id="schweppes" name="schweppes" checked />
+    <label for="scales">Швепс</label>
+  </div>
+    <div>
+    <input type="checkbox" id="sok" name="sok" checked />
+    <label for="scales">Сок</label>
+  </div>
+  <legend>Ваша національність:</legend>
+
+  <div>
+    <input type="radio" id="huey" name="drone" value="huey" checked />
+    <label for="huey">Українська</label>
+  </div>
+
+  <div>
+    <input type="radio" id="dewey" name="drone" value="dewey" />
+    <label for="dewey">Російська</label>
+  </div>
+
+  <div>
+    <input type="radio" id="louie" name="drone" value="louie" />
+    <label for="louie">Інша</label>
+  </div>
+</fieldset>
+ <input type="submit" value="Надіслати">
+  <input type="reset" value="Очистити">
+  </form>
+
+</body>
+</html>
