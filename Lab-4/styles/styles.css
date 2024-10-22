@@ -5,8 +5,8 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    justify-items: center;
     align-items: center;
     min-height: 100vh;
 }
@@ -23,8 +23,6 @@ h1 {
     width: 100%;
     max-width: 600px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 20px;
     font-size: 2.5em;
     color: #fff;
     margin-top: 20px;
@@ -37,7 +35,6 @@ form {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 500px;
     width: 100%;
-    margin-top: 10% ;
 }
 
 label {

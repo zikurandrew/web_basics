@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="java.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Lab#4</title>
+</head>
+<body>
+  <h1>Моя перша HTML-форма</h1>
+  <form name="myForm" action="https://httpbin.org/post" method="post" onsubmit="return validateForm()">
+    <fieldset>
+      <legend>Введіть данні про себе</legend>
+      <label>Ім'я:<input type="text" name="name"></label><br>
+      <br>
+      <label>Дата народження:<input type="date" name="birthday_date"></label><br>
+      <br>
+      <label>Gmail:<input type="email" name="gmail"></label><br>
+      <br>
+      <label>Повідомлення:<textarea name="comment"></textarea></label><br>
+      <br>
+    </fieldset>
+    <fieldset>
+      <legend>Ваші улюблені напої?</legend>
+      <label><input type="checkbox" name="drink" value="coffee"> Кава</label><br>
+      <label><input type="checkbox" name="drink" value="tea"> Чай</label><br>
+      <label><input type="checkbox" name="drink" value="juice"> Сік</label><br>
+      <label><input type="checkbox" name="drink" value="water"> Вода</label><br>
+    </fieldset>
+    <fieldset>
+      <legend>Моя національність</legend>
+      <label><input type="radio" name="nationality" value="ukrainian"> Українець</label><br>
+      <label><input type="radio" name="nationality" value="german"> Німець</label><br>
+      <label><input type="radio" name="nationality" value="polish"> Поляк</label><br>
+    </fieldset>
+    <br>
+      <button type="submit" class="sumbitform">Відправити</button>
+      <button type="reset" class="resetform">Очистити</button>
+    <br>
+  </form>
+  <br>
+  <picture class="picture">
+    <source media="(max-width: 468px)" srcset="./pictures/282-300x500.jpg" />
+    <source media="(min-width: 469px)" srcset="./pictures/320-1000x400.jpg" />
+    <img src="./pictures/320-1000x400.jpg" />
+  </picture>
+</body>
+</html>
