@@ -10,6 +10,10 @@
     background-color: yellow;
     font-style: italic;
   }
+  .ab2 {
+    border: 1px solid blue;
+    text-align: right;
+  }
  
   /* 4. для усіх впорядкованих списків задайте рамку 1px solid red */
   ol{

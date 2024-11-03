@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LodgingHub - Find Your Perfect Stay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.png">
+</head>
+<body>
+    <header class="header">
+        <nav class="container">
+            <div class="logo">
+                <h1>LodgingHub</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#popular-destinations" class="nav-link">Destinations</a>
+                <a href="#contact" class="nav-link">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="section hero">
+        <div class="hero-content">
+            <h2 id="find-the-best-places-to-stay-worldwide" class="animate-on-scroll">
+                Find the best places to stay worldwide
+            </h2>
+            <div class="search-container">
+                <div class="form-group">
+                    <select class="form-control" id="guests">
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4+ Guests</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-control" id="room-type">
+                        <option value="single">Single</option>
+                        <option value="double">Double</option>
+                        <option value="suite">Suite</option>
+                    </select>
+                </div>
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="popular-destinations" class="section popular-destinations">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Popular Destinations</h2>
+            <div class="slider">
+                <div class="slider-container">
+                    <!-- Paris -->
+                    <div class="destination">
+                        <div class="destination-image">
+                            <img src="https://res.cloudinary.com/dtljonz0f/image/upload/c_auto,ar_90:120,w_3840,g_auto/f_auto/q_auto/v1/gc-v1/paris/3%20giorni%20a%20Parigi%20Tour%20Eiffel" alt="Paris" loading="lazy">
+                        </div>
+                        <div class="destination-info">
+                            <h3>Paris</h3>
+                            <p class="country">France</p>
+                            <p class="price">From $100/night</p>
+                            <div class="destination-stats">
+                                <span class="stat-count">1000+</span> properties
+                            </div>
+                            <button class="explore-btn" data-city="Paris">
+                                Explore Properties
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tokyo -->
+                    <div class="destination">
+                        <div class="destination-image">
+                            <img src="https://images.goway.com/production/featured_images/japan_tokyo_akihabara_AdobeStock_295310062_Editorial_Use_Only.jpg" alt="Tokyo" loading="lazy">
+                        </div>
+                        <div class="destination-info">
+                            <h3>Tokyo</h3>
+                            <p class="country">Japan</p>
+                            <p class="price">From $120/night</p>
+                            <div class="destination-stats">
+                                <span class="stat-count">800+</span> properties
+                            </div>
+                            <button class="explore-btn" data-city="Tokyo">
+                                Explore Properties
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- New York -->
+                    <div class="destination">
+                        <div class="destination-image">
+                            <img src="https://images.goway.com/production/featured_images/japan_tokyo_akihabara_AdobeStock_295310062_Editorial_Use_Only.jpg" alt="New York" loading="lazy">
+                        </div>
+                        <div class="destination-info">
+                            <h3>New York</h3>
+                            <p class="country">USA</p>
+                            <p class="price">From $150/night</p>
+                            <div class="destination-stats">
+                                <span class="stat-count">1200+</span> properties
+                            </div>
+                            <button class="explore-btn" data-city="New York">
+                                Explore Properties
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Rome -->
+                    <div class="destination">
+                        <div class="destination-image">
+                        </div>
+                        <div class="destination-info">
+                            <h3>Rome</h3>
+                            <p class="country">Italy</p>
+                            <p class="price">From $110/night</p>
+                            <div class="destination-stats">
+                                <span class="stat-count">950+</span> properties
+                            </div>
+                            <button class="explore-btn" data-city="Rome">
+                                Explore Properties
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Barcelona -->
+                    <div class="destination">
+                        <div class="destination-image">
+                            <img src="/api/placeholder/400/320" alt="Barcelona" loading="lazy">
+                        </div>
+                        <div class="destination-info">
+                            <h3>Barcelona</h3>
+                            <p class="country">Spain</p>
+                            <p class="price">From $95/night</p>
+                            <div class="destination-stats">
+                                <span class="stat-count">750+</span> properties
+                            </div>
+                            <button class="explore-btn" data-city="Barcelona">
+                                Explore Properties
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Dubai -->
+                    <div class="destination">
+                        <div class="destination-image">
+                            <img src="/api/placeholder/400/320" alt="Dubai" loading="lazy">
+                        </div>
+                        <div class="destination-info">
+                            <h3>Dubai</h3>
+                            <p class="country">UAE</p>
+                            <p class="price">From $200/night</p>
+                            <div class="destination-stats">
+                                <span class="stat-count">600+</span> properties
+                            </div>
+                            <button class="explore-btn" data-city="Dubai">
+                                Explore Properties
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- London -->
+                    <div class="destination">
+                        <div class="destination-image">
+                            <img src="/api/placeholder/400/320" alt="London" loading="lazy">
+                        </div>
+                        <div class="destination-info">
+                            <h3>London</h3>
+                            <p class="country">UK</p>
+                            <p class="price">From $180/night</p>
+                            <div class="destination-stats">
+                                <span class="stat-count">1500+</span> properties
+                            </div>
+                            <button class="explore-btn" data-city="London">
+                                Explore Properties
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Sydney -->
+                    <div class="destination">
+                        <div class="destination-image">
+                            <img src="/api/placeholder/400/320" alt="Sydney" loading="lazy">
+                        </div>
+                        <div class="destination-info">
+                            <h3>Sydney</h3>
+                            <p class="country">Australia</p>
+                            <p class="price">From $130/night</p>
+                            <div class="destination-stats">
+                                <span class="stat-count">700+</span> properties
+                            </div>
+                            <button class="explore-btn" data-city="Sydney">
+                                Explore Properties
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section map-and-reviews">
+        <div class="container">
+            <div class="map-section">
+                <h2 id="explore-our-locations" class="section-title animate-on-scroll">
+                    Explore Our Locations
+                </h2>
+                <div id="map" class="map"></div>
+            </div>
+
+            <div class="reviews-section">
+                <h2 id="what-our-users-say" class="section-title animate-on-scroll">
+                    What Our Users Say
+                </h2>
+                <div class="reviews-container">
+                    <div class="review animate-on-scroll">
+                        <div class="review-content">
+                            <p>"Amazing experience! Found the best stay with ease!"</p>
+                            <div class="review-author">
+                                <span class="author-name">Alice</span>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review animate-on-scroll">
+                        <div class="review-content">
+                            <p>"Highly recommend LodgingHub for finding budget-friendly stays!"</p>
+                            <div class="review-author">
+                                <span class="author-name">John</span>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Contact Us</h2>
+            <div class="contact-container">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>LodgingHub</h3>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="#popular-destinations">Destinations</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link">Facebook</a>
+                            <a href="#" class="social-link">Twitter</a>
+                            <a href="#" class="social-link">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 LodgingHub. All rights reserved.</p>
+            </div>
+        </div>
+        
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script/script.js"></script>
+</body>
+</html>
