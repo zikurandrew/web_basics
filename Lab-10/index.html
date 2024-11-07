@@ -25,7 +25,7 @@
 
     <section class="section hero">
         <div class="hero-content">
-            <h2 id="find-the-best-places-to-stay-worldwide" class="animate-on-scroll">
+            <h2 class="animate-on-scroll">
                 Find the best places to stay worldwide
             </h2>
             <div class="search-container">
@@ -49,7 +49,7 @@
         </div>
     </section>
 
-    <section id="popular-destinations" class="section popular-destinations">
+    <section class="section popular-destinations">
         <div class="container">
             <h2 class="section-title animate-on-scroll">Popular Destinations</h2>
             <div class="slider">
@@ -128,7 +128,7 @@
                     <!-- Barcelona -->
                     <div class="destination">
                         <div class="destination-image">
-                            <img src="/api/placeholder/400/320" alt="Barcelona" loading="lazy">
+                            <img src="" alt="Barcelona" loading="lazy">
                         </div>
                         <div class="destination-info">
                             <h3>Barcelona</h3>
@@ -146,7 +146,7 @@
                     <!-- Dubai -->
                     <div class="destination">
                         <div class="destination-image">
-                            <img src="/api/placeholder/400/320" alt="Dubai" loading="lazy">
+                            <img src="" alt="Dubai" loading="lazy">
                         </div>
                         <div class="destination-info">
                             <h3>Dubai</h3>
@@ -164,7 +164,7 @@
                     <!-- London -->
                     <div class="destination">
                         <div class="destination-image">
-                            <img src="/api/placeholder/400/320" alt="London" loading="lazy">
+                            <img src="" alt="London" loading="lazy">
                         </div>
                         <div class="destination-info">
                             <h3>London</h3>
@@ -182,7 +182,7 @@
                     <!-- Sydney -->
                     <div class="destination">
                         <div class="destination-image">
-                            <img src="/api/placeholder/400/320" alt="Sydney" loading="lazy">
+                            <img src="" alt="Sydney" loading="lazy">
                         </div>
                         <div class="destination-info">
                             <h3>Sydney</h3>
@@ -204,14 +204,31 @@
     <section class="section map-and-reviews">
         <div class="container">
             <div class="map-section">
-                <h2 id="explore-our-locations" class="section-title animate-on-scroll">
+                <h2 class="section-title animate-on-scroll">
                     Explore Our Locations
                 </h2>
                 <div id="map" class="map"></div>
             </div>
-
+            <div class="registration-form">
+                <h2>Register</h2>
+                <form>
+                  <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                  </div>
+                  <button type="submit" class="submit-btn">Register</button>
+                </form>
+              </div>
             <div class="reviews-section">
-                <h2 id="what-our-users-say" class="section-title animate-on-scroll">
+                <h2 class="section-title animate-on-scroll">
                     What Our Users Say
                 </h2>
                 <div class="reviews-container">
@@ -285,6 +302,7 @@
                 <p>© 2024 LodgingHub. All rights reserved.</p>
             </div>
         </div>
+        
         
     </footer>
 

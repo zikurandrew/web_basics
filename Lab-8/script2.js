@@ -7,5 +7,5 @@ function b() {
 } 
 
 b(); 
-window.a = 10
+window.a = 10;
 console.log(a);
